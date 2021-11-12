@@ -10,6 +10,8 @@ import { KlausimaiComponent } from './components/klausimai/klausimai.component';
 import { NaudingaComponent } from './components/naudinga/naudinga.component';
 import { PagalbaComponent } from './components/pagalba/pagalba.component';
 import { MesComponent } from './components/mes/mes.component';
+import { QuestionsService } from './services/questions.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { MesComponent } from './components/mes/mes.component';
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [QuestionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

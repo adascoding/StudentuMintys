@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionsService } from 'src/app/services/questions.service';
 
 @Component({
   selector: 'app-klausimai',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KlausimaiComponent implements OnInit {
 
-  constructor() { }
+  questions : {id: number, title: string}[] =[];
+  constructor(private questionsService: QuestionsService) { }
 
   ngOnInit(): void {
+    this.questions = this.questionsService.questions;
   }
 
 }
